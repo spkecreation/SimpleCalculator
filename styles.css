@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2d;
+    color: #fff;
+}
+
+.navbar {
+    text-align: center;
+    padding: 20px;
+    background-color: #2a2a3b;
+}
+
+.resultdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    font-size: 2em;
+    background-color: #2a2a3b;
+    height: 150px;
+}
+
+.resultdiv output {
+    color: #76daff;
+    font-size: 3em;
+    border: none;
+    background: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.resultdiv output::after {
+    content: '|';
+    position: absolute;
+    right: -10px;
+    animation: blink 1s infinite;
+    color: #76daff;
+}
+
+.resultdiv .expression {
+    color: #76daff;
+    font-size: 1.2em;
+}
+
+.sec1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.div1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #33334d;
+    color: #76daff;
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #454563;
+}
+
+button.equal {
+    grid-column: span 4;
+    background-color: #76daff;
+    color: #33334d;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.operator{
+    background-color: rgb(71, 255, 71);
+    color: #1e1e2d;
+}
